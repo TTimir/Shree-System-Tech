@@ -45,6 +45,7 @@
 
 :root{
 	--primary-color			: #222222;
+	--hover-effect			: #1E4A8B;
 	--secondary-color		: #F5F5F5;
 	--text-color			: #81848A;
 	--accent-color			: #FF9900;
@@ -205,7 +206,7 @@ body{
 }
 
 .btn-default:hover{
-	background-color: transparent;
+	background-color: #1E4A8B;
 }
 
 .btn-default::before{
@@ -240,7 +241,7 @@ body{
 	width: 0;
 	height: 100%;
 	border-radius: 8px;
-    background: var(--primary-color);
+    background: var(--hover-effect);
     transition: all 0.4s ease-in-out;
 	z-index: 0;
 }
@@ -1157,7 +1158,7 @@ header.main-header .header-sticky.active{
 .our-services{
 	position: relative;
 	padding: 100px 0 280px;
-	background: url('../images/our-service-bg.jpg') no-repeat center center;
+	background: url('../images/service-bg.jpg') no-repeat center center;
 	background-size: cover;
 }
 
@@ -1597,12 +1598,25 @@ header.main-header .header-sticky.active{
 .project-image{
 	position: relative;
 	margin-bottom: 30px;
+	width: 100%;
+	aspect-ratio: 16/9;  /* Maintains consistent aspect ratio */
+    overflow: hidden;
 }
 
 .project-image figure{
 	display: block;
 	border-radius: 40px;
 	overflow: hidden;
+	width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.project-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensures video fills container while maintaining aspect ratio */
+    display: block;
 }
 
 .project-image img{
@@ -2323,7 +2337,7 @@ header.main-header .header-sticky.active{
 
 .page-header{
 	position: relative;
-	background: url('../images/page-header-bg.jpg') no-repeat center center;
+	background: url('../images/about-bg.jpg') no-repeat center center;
 	background-size: cover;
 	padding: 150px 0;
 }
@@ -2392,7 +2406,7 @@ header.main-header .header-sticky.active{
 
 .mission-vision-bg{
 	position: relative;
-	background: url('../images/our-service-bg.jpg');
+	background: url('../images/service-bg.jpg');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
